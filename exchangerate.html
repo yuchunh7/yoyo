@@ -17,7 +17,7 @@ d3.csv("./ExchangeRate.csv",
 	var ln = data.length;
 	console.log(data);
 	var maxy = d3.max(data,function(d){return d.Cash;});
-	var lines = d3.line().x(function(d,i){return i*(width/ln);}).y(function(d){return height-(d.Cash-20)*50});
+	var lines = d3.line().x(function(d,i){return i*(width/ln);}).y(function(d){return height-(d.Cash-20)*100});
 	ctrl.append("path").data([data]).attr("d",lines).attr("stroke","red").attr("fill","none");
 
 });
